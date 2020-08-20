@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AboutDeveloper">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="16dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/gambar_developer"
+        android:src="@drawable/gambar_profil"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_below="@+id/gambar_developer"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="@string/muhamad_fikri_mubarok"
+        android:id="@+id/nama_developer"
+        android:layout_marginHorizontal="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_below="@+id/nama_developer"
+        android:layout_marginVertical="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:text="@string/muhamadfikri64_yahoo_co_id"/>
+
+
+
+</RelativeLayout>

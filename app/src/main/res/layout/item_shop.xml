@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="4dp"
+    card_view:cardCornerRadius="4dp"
+    android:id="@+id/shop_cardview">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:scaleType="fitCenter"
+            tools:src="@color/colorAccent"
+            android:id="@+id/gambar_produk"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@id/gambar_produk"
+            android:layout_toRightOf="@id/gambar_produk"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Nama Produk"
+            android:id="@+id/nama_item"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout_button"
+            android:layout_below="@+id/nama_item"
+            android:layout_margin="16dp"
+            android:layout_toEndOf="@id/gambar_produk"
+            android:layout_toRightOf="@id/gambar_produk"
+            android:ellipsize="end"
+            android:maxLines="5"
+            tools:text="Harga"
+            android:textSize="14sp"
+            android:id="@+id/harga_item"/>
+
+        <LinearLayout
+            android:id="@+id/layout_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toEndOf="@id/gambar_produk"
+            android:layout_toRightOf="@id/gambar_produk"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_weight="1"
+                android:text="@string/details"
+                android:textSize="10sp"/>
+
+            <Button
+                android:id="@+id/btn_beli"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/beli"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Dicoding</string>
+    <string name="_6_photos">6 Photos</string>
+    <string name="details">Details</string>
+    <string name="beli">Beli</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="kategori">Kategori</string>
+    <string name="developer">Developer</string>
+    <string name="muhamad_fikri_mubarok">Muhamad Fikri Mubarok</string>
+    <string name="muhamadfikri64_yahoo_co_id">muhamadfikri64@yahoo.co.id</string>
+    <string name="shop">Shop</string>
+</resources>
