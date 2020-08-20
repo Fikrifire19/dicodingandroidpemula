@@ -1,13 +1,16 @@
 package com.example.dicoding
 
 import android.app.ActionBar
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class ProdukDetail: AppCompatActivity() {
+class ProdukDetail(private val listProduk: ArrayList<Produk>): AppCompatActivity() {
 
     private var list: ArrayList<Produk> = arrayListOf()
 
@@ -18,6 +21,8 @@ class ProdukDetail: AppCompatActivity() {
     private lateinit var detail_harga: TextView
     private lateinit var namaProdukClass: String
 
+    private var title = "Detail Produk"
+
     companion object {
         const val DATA_NAMA_PRODUK = ""
         const val DATA_HARGA_PRODUK = ""
@@ -27,7 +32,7 @@ class ProdukDetail: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
         setContentView(R.layout.detail_produk)
-        this.setActionBarTitle("Detail Produk")
+        setActionBarTitle("Detail Produk")
 
         namaProdukClass = intent.getStringExtra(DATA_NAMA_PRODUK)
         val hargaProdukDetail = intent.getStringExtra(DATA_HARGA_PRODUK)
@@ -53,11 +58,39 @@ class ProdukDetail: AppCompatActivity() {
         detail_harga.text = hargaProdukDetail.toString()
     }
 
+
+    private operator fun <T> Array<T>.get(namaProduk: T): T {
+        return namaProduk
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        setMode(item.itemId)
+        return super.onOptionsItemSelected(item)
+    }
+
     private fun setActionBarTitle(title: String) {
         supportActionBar?.title = title
     }
 
-    private operator fun <T> Array<T>.get(namaProduk: T): T {
-        return namaProduk
+    private fun setMode(selectedMode: Int){
+        when (selectedMode) {
+            R.id.action_shop -> {
+                title = "Shop"
+                startActivity(Intent(this@ProdukDetail, Shop::class.java))
+            }
+
+
+            R.id.action_about_developer -> {
+                title = "About Developer"
+                startActivity(Intent(this@ProdukDetail, AboutDeveloper::class.java))
+            }
+        }
+
+        setActionBarTitle(title)
     }
 }

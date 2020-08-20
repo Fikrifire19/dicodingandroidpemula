@@ -3,6 +3,7 @@ package com.example.dicoding
 import android.app.ActionBar
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 
@@ -16,6 +17,11 @@ class AboutDeveloper : AppCompatActivity() {
         setActionBarTitle(title)
 
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

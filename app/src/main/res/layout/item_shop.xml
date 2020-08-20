@@ -60,7 +60,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="8dp"
             android:layout_toEndOf="@id/gambar_produk"
             android:layout_toRightOf="@id/gambar_produk"
             android:orientation="horizontal">

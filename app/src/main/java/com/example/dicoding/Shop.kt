@@ -55,7 +55,7 @@ class Shop(private val listProduk: ArrayList<Produk>): RecyclerView.Adapter<Shop
         holder.btnBeli.setOnClickListener {
             Toast.makeText(
                 holder.itemView.context,
-                "Beli" + listProduk[holder.adapterPosition].nama_produk,
+                "Kamu membeli " + listProduk[holder.adapterPosition].nama_produk,
                 Toast.LENGTH_SHORT
             ).show()
         }
@@ -63,7 +63,7 @@ class Shop(private val listProduk: ArrayList<Produk>): RecyclerView.Adapter<Shop
         holder.itemView.setOnClickListener {
             Toast.makeText(
                 holder.itemView.context,
-                "Kamu memilih" + listProduk[holder.adapterPosition].nama_produk,
+                "Kamu memilih " + listProduk[holder.adapterPosition].nama_produk,
                 Toast.LENGTH_SHORT
             ).show()
         }
